@@ -1,0 +1,366 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+
+
+/***************************************** NAVBAR *********************************/
+
+nav{
+    width: 100%;
+    height: 65px;
+    background-color: #EFF0F5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-area: navbar;
+}
+
+#logo{
+    width: 200px;
+    height: fit-content;
+    margin-left: 20px;
+}
+
+.nav-item-list{
+    position: absolute;
+    margin: auto;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.nav-item-list a{
+    height:  65px;
+    padding: 20px;
+    
+}
+
+.nav-active{
+    border-bottom: 4px solid #0AC5A8 ;
+}
+
+.list-item{
+    text-decoration: none;
+    color: #25243C;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.nav-user-circle{
+    height: 45px;
+    width: 45px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #D7DBF4;
+    z-index: 2;
+    cursor: pointer;
+    
+    
+}
+
+#user-initials{
+    width: auto;
+    color: #25243C;
+    font-size: 17px;
+    font-weight: 600;
+    text-transform: uppercase;
+    
+}
+
+/***************************************** FILTER *********************************/
+
+.filter-wrapper{
+ border-bottom: 3px solid #EFF0F5;
+ width: 90%;
+ margin-left: 5%;
+ margin-right: auto;
+ margin-top: 20px;
+ max-height: 80%;
+ padding-bottom: 30px;
+}
+
+.filter-top{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.filter-top h1{
+    border-left: 2px solid #0AC5A8 ;
+    padding-left: 10px;
+}
+
+.filter-btn{
+    border: none;
+    outline: none;
+    background: none;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 0px 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.add-btn{
+    border: 2px solid #0ac5a980;
+    background-color: #0ac5a91c;
+    text-decoration: none;
+    color: black;
+
+}
+
+.add-btn:hover{
+    background-color: #0ac5a934;
+}
+
+.delete-btn{
+    border: 2px solid #d11a2975;
+    background-color: #d11a2925;
+
+}
+
+.delete-btn:hover{
+    background-color: #d11a2948;
+
+}
+
+
+
+.filter-bottom{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.filter-column {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.filter-column label{
+    font-weight: 700;
+    font-size: 17px;
+    padding-bottom: 10px;
+}
+
+.filter-column input{
+    font-size: 17px;
+    padding: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    border-radius: 8px;
+    border: 2px solid #EFF0F5;
+}
+
+.filter-column input:focus{
+    outline: none;
+}
+
+.filter-column select{
+    font-size: 17px;
+    padding: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    border-radius: 8px;
+    border: 2px solid #EFF0F5;
+}
+
+.filter-column select:focus{
+    outline: none;
+}
+
+.apply-btn{
+    border: 2px solid #8dbcff;
+    background-color: #ddeafc;
+    margin-top: 30px;
+
+}
+
+.apply-btn:hover{
+    background-color: #cde0fd;
+
+}
+
+/***************************************** TABLE *********************************/
+
+.table-wrapper{
+border: 1px solid #EFF0F5;
+ width: 90%;
+ margin-left: 5%;
+ margin-right: auto;
+ margin-top: 20px;
+ max-height: 80%;
+ border-radius: 8px;
+ background-color: #F0F6FE;
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+ th{
+    padding: 12px;
+    padding-left: 10px;
+    text-align: left;
+    background-color: white;
+}
+
+th:first-child{
+    border-top-left-radius: 8px ;
+}
+
+th:last-child{
+    border-top-right-radius: 8px ;
+}
+
+td{
+    padding: 12px;
+    padding-left: 10px;
+    text-align: left;
+    /* background-color: #F0F6FE; */
+    border-top: 1px solid white;
+    max-width: 200px;
+    overflow-wrap: break-word;
+}
+
+
+
+
+
+/******************************************* ADD ITEM CSS ***********************************/
+/******************************************* ADD ITEM CSS ***********************************/
+/******************************************* ADD ITEM CSS ***********************************/
+
+
+.form-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-wrapper form {
+   display: grid;
+   grid-template-columns: 300px 300px;
+   grid-template-rows: 20px auto;
+   grid-template-areas: 
+    "title title"
+    "first second"
+    "btn btn"
+     ;
+
+     column-gap: 30px;
+     row-gap: 30px;
+    border: 1px solid #EFF0F5;
+    border-radius: 8px;
+    padding: 40px 100px;
+    margin-top: 50px;
+    background-color: #eff0f538;
+}
+
+.title{
+    grid-area: title;
+}
+
+.first{
+    grid-area: first;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.second{
+    grid-area: second;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.btn{
+    grid-area: btn;
+    display: flex;
+    justify-content: center;
+}
+
+.form-wrapper h1{
+    border-left: 2px solid #0AC5A8 ;
+    padding-left: 10px;
+}
+
+.form-wrapper form label{
+    margin-top: 40px;
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.form-wrapper form input{
+    font-size: 17px;
+    padding: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    border-radius: 8px;
+    border: 2px solid #EFF0F5;
+}
+
+.form-wrapper form input:focus{
+    outline: none;
+}
+
+.form-wrapper form select{
+    font-size: 17px;
+    padding: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    border-radius: 8px;
+    border: 2px solid #EFF0F5;
+}
+
+
+.form-wrapper form textarea{
+    font-size: 17px;
+    padding: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    border-radius: 8px;
+    border: 2px solid #EFF0F5;
+    max-height: 200px;
+
+}
+
+.form-wrapper form textarea, select:focus{
+outline: none;
+}
+
+.form-wrapper form #submit-add-btn{
+    border: 2px solid #0ac5a980;
+    background-color: #0ac5a91c; 
+    padding: 10px 30px;
+    font-weight: 600;
+}
+
+.form-wrapper form #submit-add-btn:hover{
+    background-color: #0ac5a934;
+
+}

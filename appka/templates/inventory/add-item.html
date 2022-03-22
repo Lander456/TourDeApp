@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Přidat zboží</title>
+    <link rel="stylesheet" href="inventoryStyle.css">
+    <link rel="stylesheet" href="addItem.css">
+</head>
+
+<body>
+
+    <!------------------------------------NAVBAR ---------------------------->
+
+    <nav>
+        <img src="napis_trans.png" alt="logo" id="logo">
+
+        <div class="nav-item-list">
+            <a class="list-item nav-active" href="#">Vampire</a>
+            <a class="list-item" href="#">Vampire</a>
+            <a class="list-item" href="#">Vampire</a>
+            <a class="list-item" href="#">Vampire</a>
+
+        </div>
+
+        <div class="nav-user-circle">
+            <a id="user-initials">MO</a>
+        </div>
+    </nav>
+
+    <!------------------------------------MAIN ---------------------------->
+
+
+    <div class="form-wrapper">
+
+        <form action="#" autocomplete="off">
+            <div class="title">
+                <H1>Přidání zboží</H1>
+            </div>
+            <div class="first">
+                <label for="name">Jméno:</label>
+
+                <input type="text" id="name">
+
+                <label for="categories">Kategorie:</label>
+
+                <select name="categories" id="categories">
+                    <option value=""></option>
+                    <option value="tourism">Turistika</option>
+                    <option value="climbing">Lezení</option>
+                    <option value="running">Běh</option>
+                    <option value="uncategorized">Nekategorizováno</option>
+                </select>
+
+                <label for="color">Barva:</label>
+
+                <input type="text" id="color">
+            </div>
+
+            <div class="second">
+
+                <label for="description">Popis:</label>
+                <textarea name="description" id="description" cols="30" rows="10"></textarea>
+
+                <label for="stock">Počet kusů:</label>
+                <input type="number" id="stock" min="0">
+            </div>
+            <div class="btn">
+                <input type="submit" value="Přidat" class="filter-btn add-btn" id="submit-add-btn"></input>
+
+            </div>
+        </form>
+    </div>
+
+
+</body>
+
+</html>

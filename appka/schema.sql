@@ -1,0 +1,19 @@
+DROP TABLE IF EXISTS user;
+
+CREATE TABLE user (
+    u.id INTEGER PRIMARY KEY AUTOINCREMENT,
+    username TEXT UNIQUE NOT NULL,
+    password TEXT NOT NULL
+);
+
+DROP TABLE IF EXISTS inventory;
+
+--inventory table
+CREATE TABLE inventory(
+    i.id INTEGER PRIMARY KEY AUTOINCREMENT
+    itemName TEXT NOT NULL
+    category TEXT NOT NULL
+    colour TEXT NOT NULL
+    IN_STORE INTEGER NOT NULL
+    desc TEXT NOT NULL
+);

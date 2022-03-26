@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokladna</title>
+    <link rel="stylesheet" href="inventoryStyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/71ba330703.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav>
+        <img src="napis_trans.png" alt="logo" id="logo">
+
+        <div class="nav-item-list">
+            <a class="list-item" href="#">Vampire</a>
+            <a class="list-item nav-active" href="#">Vampire</a>
+            <a class="list-item" href="#">Vampire</a>
+            <a class="list-item" href="#">Vampire</a>
+
+        </div>
+
+        <div class="nav-user-circle">
+            <a id="user-initials">MO</a>
+        </div>
+    </nav>
+
+    <!------------------------------------------ FILTER ----------------------------->
+    <main>
+        <div class="filter-wrapper">
+            <div class="filter-top">
+
+                <h1>Pokladna</h1>
+                <div class="add-btns">
+                    <a href="add-item.html" class="filter-btn add-btn">Přejít do košíku</a>
+                    <!-- <button class="filter-btn delete-btn">Odstranit zboží</button> -->
+                </div>
+            </div>
+
+            <!-- zde zacina formular -->
+
+            <form action="#" autocomplete="off">
+
+                <div class="filter-bottom">
+
+                    <div class="filter-column">
+                        <label for="search">Název produktu</label>
+                        <input type="text" id="search" placeholder="Hledat">
+                    </div>
+                    <div class="filter-column">
+                        <label for="categories">Kategorie</label>
+                        <select name="categories" id="categories">
+                            <option value=""></option>
+                            <option value="tourism">Turistika</option>
+                            <option value="climbing">Lezení</option>
+                            <option value="running">Běh</option>
+                            <option value="uncategorized">Nekategorizováno</option>
+                        </select>
+                    </div>
+                    <input type="submit" value="Použít filtry" class="filter-btn apply-btn"></input>
+                </div>
+            </form>
+
+        </div>
+
+        <!------------------------------------------ TABLE ----------------------------->
+
+        <div class="table-wrapper sell-table-wrapper">
+            <table>
+                <thead>
+                    <th>Název</th>
+                    <th>Kategorie</th>
+                    <th>Barva</th>
+                    <th>Skladem</th>
+                    <th>Popis</th>
+                    <th></th>
+                </thead>
+                <tbody id="tableData">
+                    <tr>
+                        <td>Vampire</td>
+                        <td>Vampire</td>
+                        <td>Vampireeeee</td>
+                        <td>Vampireeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee</td>
+                        <td>Vampireeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee</td>
+                        <td>
+                            <div class="quick-options">
+                                <div class="adjust-quantity">
+                                    <input type="number" id="quantity" class="qty" min="0" value="0">
+                                    <span class="adjust-btns">
+                                        <button class="adjust-btn adjust-btn-plus">+</button>
+                                        <button class="adjust-btn adjust-btn-minus">-</button>
+                                    </span>
+                                </div>
+                                <button class="add-to-cart-btn">Přidat do košíku
+                                    <i class="fa-solid fa-cart-plus"></i></button>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Vampire</td>
+                        <td>Vampire</td>
+                        <td>Vampire</td>
+                        <td>Vampire</td>
+                        <td>Vampire</td>
+                        <td>
+                            <div class="quick-options">
+                                <div class="adjust-quantity">
+                                    <input type="number" id="quantity" class="qty" min="0" value="0">
+                                    <span class="adjust-btns">
+                                        <button class="adjust-btn adjust-btn-plus">+</button>
+                                        <button class="adjust-btn adjust-btn-minus">-</button>
+                                    </span>
+                                </div>
+                                <button class="add-to-cart-btn">Přidat do košíku
+                                    <i class="fa-solid fa-cart-plus"></i></button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </main>
+    <script src="mainScript.js"></script>
+</body>
+
+</html>

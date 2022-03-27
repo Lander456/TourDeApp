@@ -89,6 +89,20 @@
                     <td>{{ item["colour"] }}</td>
                     <td>{{ item["IN_STOCK"] }}</td>
                     <td>{{ item["desc"] }}</td>
+                    <td>
+                            <div class="quick-options">
+                                <div class="adjust-quantity">
+                                    <input type="number" id="quantity" class="qty" min="0" value="0">
+                                    <span class="adjust-btns">
+                                        <button class="adjust-btn adjust-btn-plus">+</button>
+                                        <button class="adjust-btn adjust-btn-minus">-</button>
+                                    </span>
+                                </div>
+                                <button class="add-btn-quick"><i class="fa-solid fa-plus"></i></button>
+                                <button class="remove-btn"><i class="fa-solid fa-trash-can"></i></button>
+
+                            </div>
+                        </td>
                 </tr>
                 {% endfor %}
             </tbody>

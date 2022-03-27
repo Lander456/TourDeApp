@@ -108,7 +108,55 @@
             </tbody>
         </table>
     </div>
+<script>
+    //// ADJUST BUTTONS
 
+let minusBtn = document.getElementsByClassName("adjust-btn-minus")
+
+let plusBtn = document.getElementsByClassName("adjust-btn-plus")
+
+
+/// increase
+
+for (let i = 0; i < plusBtn.length; i++) {
+    const button = plusBtn[i];
+    button.addEventListener("click", function (event) {
+        let btnClicked = event.target;
+
+        let input = btnClicked.parentElement.parentElement.children[0]
+
+        let inputValue = input.value;
+
+        let newValue = parseInt(inputValue) + 1;
+
+        input.value = newValue
+    })
+
+}
+
+
+/// decrease
+
+for (let i = 0; i < minusBtn.length; i++) {
+    const button = minusBtn[i];
+    button.addEventListener("click", function (event) {
+        let btnClicked = event.target;
+
+        let input = btnClicked.parentElement.parentElement.children[0]
+
+        let inputValue = input.value;
+
+        let newValue = parseInt(inputValue) - 1;
+
+        if (newValue >= 0) {
+            input.value = newValue;
+        } else {
+            newValue = 0
+        }
+    })
+
+}
+    </script>
 
 </body>
 

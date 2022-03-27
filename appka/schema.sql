@@ -10,3 +10,13 @@ CREATE TABLE inventory(
     IN_STORE INTEGER,
     descript TEXT
 );
+
+--users
+
+DROP TABLE IF EXISTS users;
+
+CREATE TABLE users(
+    userId INTEGER PRIMARY KEY AUTOINCREMENT,
+    userName TEXT UNIQUE NOT NULL,
+    password TEXT NOT NULL 
+);

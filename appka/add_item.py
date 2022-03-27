@@ -18,6 +18,6 @@ def addItem():
             (name, category, colour, inStock, decription)
         )
         db.commit()
-        return redirect("inventory/inventory.html", items = items)
+        return redirect("inventory")
     else:
         return render_template("inventory/add-item.html")

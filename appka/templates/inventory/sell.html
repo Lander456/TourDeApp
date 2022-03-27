@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokladna</title>
-    <link rel="stylesheet" href="inventoryStyle.css">
+    <link rel="stylesheet" href="appka/static/inventoryStyle.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -129,7 +129,55 @@
         </div>
 
     </main>
-    <script src="mainScript.js"></script>
+    <script>
+    //// ADJUST BUTTONS
+
+let minusBtn = document.getElementsByClassName("adjust-btn-minus")
+
+let plusBtn = document.getElementsByClassName("adjust-btn-plus")
+
+
+/// increase
+
+for (let i = 0; i < plusBtn.length; i++) {
+    const button = plusBtn[i];
+    button.addEventListener("click", function (event) {
+        let btnClicked = event.target;
+
+        let input = btnClicked.parentElement.parentElement.children[0]
+
+        let inputValue = input.value;
+
+        let newValue = parseInt(inputValue) + 1;
+
+        input.value = newValue
+    })
+
+}
+
+
+/// decrease
+
+for (let i = 0; i < minusBtn.length; i++) {
+    const button = minusBtn[i];
+    button.addEventListener("click", function (event) {
+        let btnClicked = event.target;
+
+        let input = btnClicked.parentElement.parentElement.children[0]
+
+        let inputValue = input.value;
+
+        let newValue = parseInt(inputValue) - 1;
+
+        if (newValue >= 0) {
+            input.value = newValue;
+        } else {
+            newValue = 0
+        }
+    })
+
+}
+    </script>
 </body>
 
 </html>

@@ -25,4 +25,7 @@ def create_app(test_config=None):
     from . import inventory
     app.register_blueprint(inventory.bp)
 
+    from . import add_item
+    app.register_blueprint(add_item.bp)
+
     return app

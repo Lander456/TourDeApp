@@ -1,0 +1,143 @@
+/***************************************** NAVBAR *********************************/
+
+nav{
+    width: 100%;
+    height: 65px;
+    background-color: #EFF0F5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-area: navbar;
+}
+
+#logo{
+    width: 200px;
+    height: fit-content;
+    margin-left: 20px;
+}
+
+.nav-item-list{
+    position: absolute;
+    margin: auto;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.nav-item-list a{
+    height:  65px;
+    padding: 20px;
+    
+}
+
+.nav-active{
+    border-bottom: 4px solid #0AC5A8 ;
+}
+
+.list-item{
+    text-decoration: none;
+    color: #25243C;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.nav-user-circle{
+    height: 45px;
+    width: 45px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #D7DBF4;
+    z-index: 2;
+    cursor: pointer;
+    
+    
+}
+
+#user-initials{
+    width: auto;
+    color: #25243C;
+    font-size: 17px;
+    font-weight: 600;
+    text-transform: uppercase;
+    
+}
+
+
+/************************************ CART *******************************/
+
+.cart-wrapper{
+    border: 1px solid #EFF0F5;
+    border-radius: 8px;
+    width: 70%;
+    padding: 40px 100px;
+    margin-top: 50px;
+    background-color: #eff0f538;
+    
+}
+
+table{
+    background-color: white;
+    margin-top: 30px;
+    width: 100%;
+    padding: 30px ;
+}
+
+
+td{
+    padding: 12px;
+    padding-left: 10px;
+    text-align: left;
+    border-bottom: 1px solid #EFF0F5;
+    max-width: 200px;
+    overflow-wrap: break-word;
+    height: 50px;
+}
+
+
+tr:last-child{
+    height: 60px;
+    border-top: 2px solid #EFF0F5;
+    font-weight: 600;
+    font-size: 18px;
+    border-bottom: none;
+
+}
+
+tr:last-child td{
+    border-bottom: none;
+}
+
+
+
+.remove-btn{
+    border: 2px solid #EFF0F5;   
+    outline: none;
+    background-color: white;
+    padding: 10px 13px;
+    border-radius: 8px;
+    
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+ .remove-btn:hover{
+    border: 2px solid #d11a2975;
+    background-color: #d11a2959;
+    transition: 0.2s;
+}
+
+.sell-btn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+}

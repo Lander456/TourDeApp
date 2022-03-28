@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Košík</title>
+    <link rel="stylesheet" href="inventoryStyle.css">
+    <link rel="stylesheet" href="cartStyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/71ba330703.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav>
+        <img src="napis_trans.png" alt="logo" id="logo">
+
+        <div class="nav-item-list">
+            <a class="list-item" href="#">Vampire</a>
+            <a class="list-item nav-active" href="#">Vampire</a>
+            <a class="list-item" href="#">Vampire</a>
+            <a class="list-item" href="#">Vampire</a>
+
+        </div>
+
+        <div class="nav-user-circle">
+            <a id="user-initials">MO</a>
+        </div>
+    </nav>
+
+    <!---------------------------------MAIN ------------------------------------->
+    <div class="form-wrapper">
+        <div class="cart-wrapper">
+            <div class="title">
+                <H1>Košík</H1>
+            </div>
+
+            <table>
+                <!-------------------- first item !!!------------------->
+                <tr>
+                    <td>Vampire</td>
+                    <td>Vampireeeeeeeeeeeeeee</td>
+                    <td>
+                        <span class="cart-qty-btns">
+                            <span class="adjust-quantity">
+                                <input type="number" id="quantity" class="qty" min="0" value="0">
+                                <div class="adjust-btns">
+                                    <button class="adjust-btn adjust-btn-plus">+</button>
+                                    <button class="adjust-btn adjust-btn-minus">-</button>
+                                </div>
+                            </span>
+                        </span>
+                    </td>
+                    <td>100 Kč</td>
+                    <td><button class="remove-btn"><i class="fa-solid fa-trash-can"></i></button></td>
+                </tr>
+
+                <!-------------------- second item !!!------------------->
+                <tr>
+                    <td>Vampire</td>
+                    <td>Vampire</td>
+                    <td>
+                        <span class="cart-qty-btns">
+                            <span class="adjust-quantity">
+                                <input type="number" id="quantity" class="qty" min="0" value="0">
+                                <div class="adjust-btns">
+                                    <button class="adjust-btn adjust-btn-plus">+</button>
+                                    <button class="adjust-btn adjust-btn-minus">-</button>
+                                </div>
+                            </span>
+                        </span>
+                    </td>
+                    <td>100 Kč</td>
+                    <td><button class="remove-btn"><i class="fa-solid fa-trash-can"></i></button></td>
+                </tr>
+
+                <!-------------------- last item !!!------------------->
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td id="sum">Celková cena:</td>
+                    <td id="price">200 Kč</td>
+
+                </tr>
+
+            </table>
+            <div class="sell-btn">
+                <a href="add-item.html" class="filter-btn add-btn">Dokončit objednávku</a>
+            </div>
+
+        </div>
+
+    </div>
+    <script src="mainScript.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrace nového zaměstance</title>
+    <link rel="stylesheet" href="inventoryStyle.css">
+    <link rel="stylesheet" href="addItem.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!------------------------------------NAVBAR ---------------------------->
+
+    <nav>
+        <img src="napis_trans.png" alt="logo" id="logo">
+
+        <div class="nav-item-list">
+            <a class="list-item nav-active" href="#">Vampire</a>
+            <a class="list-item" href="#">Vampire</a>
+            <a class="list-item" href="#">Vampire</a>
+            <a class="list-item" href="#">Vampire</a>
+
+        </div>
+
+        <div class="nav-user-circle">
+            <a id="user-initials">MO</a>
+        </div>
+    </nav>
+
+    <!------------------------------------MAIN ---------------------------->
+
+
+    <div class="reg-wrapper">
+
+        <form action="#" autocomplete="off">
+            <div class="title">
+                <H1>Registrace</H1>
+            </div>
+            <div class="first">
+                <label for="name">Jméno:</label>
+
+                <input type="text" id="name" name="name">
+
+                <div class="role-input">
+
+                    <label for="role">Role:</label>
+
+                    <select name="role" id="role">
+                        <option value=""></option>
+                        <option value="manager">Manažer</option>
+                        <option value="seller">Prodavač</option>
+                        <option value="whman">Skladník</option>
+                        <option value="shift-leader">Vedoucí směny</option>
+                    </select>
+
+                </div>
+
+                <div class="add-role-btn-wrapper btn">
+                    <!-- <input type="submit" value="Přidat roli" class="filter-btn add-btn add-role-btn"
+                        id="add-role-btn"></input> -->
+
+                    <a id="add-role-btn" class="filter-btn add-btn add-role-btn">Přidat roli</a>
+
+                </div>
+
+
+            </div>
+
+            <div class="second">
+
+                <label for="email">Email:</label>
+
+                <input type="email" id="email" name="email">
+
+                <label for="pwd">Heslo</label>
+                <input type="text" id="pwd">
+
+                <div class="add-role-btn-wrapper btn invisible">
+                    <input type="submit" value="Přidat roli" class="filter-btn add-btn add-role-btn" id=""></input>
+
+                </div>
+            </div>
+
+
+            <div class="btn">
+                <input type="submit" value="Přidat" class="filter-btn add-btn" id="submit-add-btn"></input>
+
+            </div>
+
+
+        </form>
+    </div>
+
+    <script src="mainScript.js"></script>
+</body>
+
+</html>

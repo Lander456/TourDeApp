@@ -1,0 +1,193 @@
+/* CSS Document */
+body {
+     margin: 0;
+     padding: 0;
+     font-size:16px;
+     font-weight: 400;
+     width: 100%;
+     background-color: #EFF0F5;
+     overflow-x: hidden;
+     font-family: 'Montserrat', sans-serif;
+}
+
+.download-btn-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+#download-btn{
+    margin-top: 50px;
+    margin-bottom: 30px;
+    padding: 10px 15px;
+    font-family: 'Montserrat', sans-serif;
+    background: none;
+    background-color: #B30B00;
+    outline: none;
+    color: white;
+    border: 2px solid #6e0700;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+#download-btn:hover{
+    background-color: #6e0700;
+    transition: 0.4s;
+}
+
+p {
+     margin: 0;
+}
+.page {
+    margin-top: 0;
+     background: #fff;
+     display: block;
+     /* margin: 3rem auto 3rem auto; */
+     position: relative;
+     box-shadow: 0 0 0,5cm rgba(0, 0, 0, 0.5);
+     
+}
+.page[size="A4"]{
+     width: 100%;
+     height: 20cm;
+     overflow: hidden;
+}
+.top-section{
+     color:#000;
+     padding:20px;
+     height:115px;
+     background-color:#EFF0F5;
+}
+.top-section img{
+    margin: 10px;
+    width: 400px;
+    height: fit-content;
+}
+.faktura {
+    float:right;
+    margin-top:50px;
+    margin-right:15px;
+    font-size:30px;
+}
+.fakt{
+    margin:30px;
+    
+    
+}
+.nazov{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.info {
+    margin-left: 15px;
+    font-size: 15px;
+}
+
+.zbytek{
+    margin-top: 8px;
+}
+.obsah{
+    margin-top: 50px;
+}
+
+.obsah p {
+    font-weight: 600;
+}
+
+.konec{
+    font-size:12px;
+    position:absolute;
+    bottom: 15px;
+    left: 29%;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.invoice-left{
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.invoice-right{
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    border-left: 2px solid #EFF0F5;
+    padding-left: 50px;
+}
+
+.zbytek p {  
+    margin-top: 16px;
+}
+
+.invoice-top{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    
+}
+
+.info p {
+    margin-top: 5px;
+}
+
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-wrapper{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: auto;
+    margin-top: 20px;
+    max-height: 80%;
+    margin-bottom: 300px;
+}
+
+th{
+    padding: 12px;
+    padding-left: 10px;
+    text-align: left;
+    background-color: white;
+}
+
+td{
+    padding: 12px;
+    padding-left: 10px;
+    text-align: left;
+    /* background-color: #F0F6FE; */
+    border-top: 1px solid #EFF0F5;
+    max-width: 200px;
+    overflow-wrap: break-word;
+    
+}
+
+tr:last-child{
+    height: 60px;
+    border-top: 2px solid #EFF0F5;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.sum-price{
+    border-bottom: 2px solid #EFF0F5;
+
+}
+
+.end{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}

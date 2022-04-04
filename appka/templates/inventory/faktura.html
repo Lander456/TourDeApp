@@ -126,7 +126,9 @@
       let btn = document.querySelector("#download-btn")
 
       btn.addEventListener("click", function () {
-         html2pdf(element)
+         html2pdf(element, {
+            filename: 'faktura.pdf'
+         })
       })
    </script>
 

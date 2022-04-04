@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="content-type" content="text/html; charset=utf-8">
+   <meta name="generator" content="PSPad editor, www.pspad.com">
+   <title>Faktura</title>
+   <link rel="stylesheet" href="faktura.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins&display=swap"
+      rel="stylesheet">
+   <script src="https://kit.fontawesome.com/71ba330703.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+   <div class="page" size="A4" id="element-to-print">
+      <div class="top-section">
+         <img src="logoVelkePlank_trans.png" alt="logo">
+
+
+         <div class="faktura">
+            <p>Faktura č. 123</p>
+         </div>
+      </div>
+
+      <div class="fakt">
+         <div class="invoice-top">
+            <div class="invoice-left">
+               <div class="nazov">
+                  <p>Zaurex s. r. o.</p>
+               </div>
+               <div class="info">
+                  <p>IČ: 26678586</p>
+                  <p>Adresa: Křenová 89/19, 602 00 Brno</p>
+               </div>
+            </div>
+            <div class="invoice-right">
+               <div class="zbytek">
+                  <p>Prodejce:</p>
+                  <p>Datum prodeje: </p>
+               </div>
+            </div>
+         </div>
+
+
+
+
+         <div class="obsah">
+            <p>Obsah nákupu:</p>
+         </div>
+
+         <div class="table-wrapper">
+            <table>
+               <thead>
+                  <th>Název</th>
+                  <th>Barva</th>
+                  <th>Počet</th>
+                  <th>Cena</th>
+               </thead>
+
+               <!------------ FIRST ITEM -------------->
+               <tr>
+                  <td>Boty</td>
+                  <td>Černá</td>
+                  <td>1</td>
+                  <td>999 Kč</td>
+               </tr>
+
+               <!------------ SECOND ITEM -------------->
+               <tr>
+                  <td>Boty</td>
+                  <td>Černá</td>
+                  <td>1</td>
+                  <td>999 Kč</td>
+               </tr>
+
+
+               <!------------ LAST ITEM  !!!!!-------------->
+               <tr>
+                  <td></td>
+                  <td></td>
+                  <td class="sum">Celková suma faktury v Kč:</td>
+                  <td class="sum-price">2000 Kč</td>
+               </tr>
+
+            </table>
+            <div class="end">
+               Zaurex s. r. o., Křenová 89/19, 602 00 Brno, IČ: 26678586, 2022
+            </div>
+
+         </div>
+      </div>
+
+   </div>
+   <div class="download-btn-wrapper">
+      <button id="download-btn"> Stáhnout jako PDF <i class="fa-solid fa-file-pdf"></i></button>
+   </div>
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+      integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+   <script>
+      var element = document.getElementById('element-to-print');
+      let btn = document.querySelector("#download-btn")
+
+      btn.addEventListener("click", function () {
+         html2pdf(element)
+      })
+   </script>
+
+</body>
+
+</html>

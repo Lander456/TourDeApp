@@ -1,7 +1,6 @@
-import functools
 from flask import *
 from werkzeug.security import check_password_hash, generate_password_hash
-from db import get_db
+from appka.db import get_db
 
 bp = Blueprint("auth", __name__, url_prefix="/auth")
 
@@ -34,7 +33,7 @@ def register():
 
     return render_template("auth/register.html")
 
-@bp.route("/login", methods=("GET","POST"))
+@bp.route("/", methods=("GET","POST"))
 def login():
     if request.method == "POST":
         username = request.form["userName"]
@@ -42,7 +41,7 @@ def login():
         db = get_db()
         error = None
         user = db.execute(
-            "SELECT * FROM user WHERE username = ?", (username,)
+            "SELECT * FROM user WHERE username = ?", (username)
         ).fetchone()
 
         if user is None:

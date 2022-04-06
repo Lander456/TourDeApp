@@ -7,7 +7,7 @@ CREATE TABLE inventory(
     itemName TEXT,
     category TEXT,
     colour TEXT,
-    IN_STORE INTEGER,
+    IN_STORE TEXT,
     descript TEXT
 );
 

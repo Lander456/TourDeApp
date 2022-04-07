@@ -42,7 +42,7 @@
 
             <!-- zde zacina formular -->
 
-            <form action="#" autocomplete="off">
+            <form action="#" autocomplete="off" method="post">
 
                 <div class="filter-bottom">
 
@@ -79,12 +79,13 @@
                     <th></th>
                 </thead>
                 <tbody id="tableData">
+                    {% for item in items %}
                     <tr>
-                        <td>Vampire</td>
-                        <td>Vampire</td>
-                        <td>Vampireeeee</td>
-                        <td>Vampireeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee</td>
-                        <td>Vampireeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee</td>
+                        <td>{{ item["itemName"] }}</td>
+                        <td>{{ item["category"] }}</td>
+                        <td>{{ item["colour"] }}</td>
+                        <td>{{ item["inStock"] }} ks</td>
+                        <td>{{ item["descript"] }}</td>
                         <td>
                             <div class="quick-options">
                                 <div class="adjust-quantity">
@@ -94,32 +95,14 @@
                                         <button class="adjust-btn adjust-btn-minus">-</button>
                                     </span>
                                 </div>
-                                <button class="add-to-cart-btn">Přidat do košíku
+                                <form action="#" autocomplete="off" method="post">
+                                <button class="add-to-cart-btn" id="addToCart">Přidat do košíku
                                     <i class="fa-solid fa-cart-plus"></i></button>
+                                </form>
                             </div>
                         </td>
                     </tr>
-
-                    <tr>
-                        <td>Vampire</td>
-                        <td>Vampire</td>
-                        <td>Vampire</td>
-                        <td>Vampire</td>
-                        <td>Vampire</td>
-                        <td>
-                            <div class="quick-options">
-                                <div class="adjust-quantity">
-                                    <input type="number" id="quantity" class="qty" min="0" value="0">
-                                    <span class="adjust-btns">
-                                        <button class="adjust-btn adjust-btn-plus">+</button>
-                                        <button class="adjust-btn adjust-btn-minus">-</button>
-                                    </span>
-                                </div>
-                                <button class="add-to-cart-btn">Přidat do košíku
-                                    <i class="fa-solid fa-cart-plus"></i></button>
-                            </div>
-                        </td>
-                    </tr>
+                    {% endfor %}
                 </tbody>
             </table>
         </div>

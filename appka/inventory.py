@@ -10,7 +10,7 @@ def inventory():
             "SELECT * FROM inventory"
         ).fetchall()
         return render_template("inventory/inventory.html", items = items)
-    else:
+    elif request.method == "POST" and "categories" in request.form and "search" in request.form:
         category = request.form["categories"]
         search = request.form["search"]
         if search == "" and category == "":
@@ -29,5 +29,33 @@ def inventory():
             items = db.execute(
                 "SELECT * FROM inventory WHERE category = ? AND itemName LIKE ?", [category,search]
             )
+        return render_template("inventory/inventory.html", items = items)
+
+    elif request.method == "POST" and "removeBtn" in request.form:
+        qty = int(request.form["quantity"])
+        iId = int(request.form[""])
+        db.execute(
+            "UPDATE inventory SET inStock = inStock - ? WHERE itemId = ?", [qty, iId]
+        )
+        db.commit()
+        items = db.execute(
+            "SELECT * FROM inventory"
+        ).fetchall()
+    elif request.method == "POST" and "addBtn" in request.form:
+        qty = int(request.form["quantity"])
+        iId = int(request.form[""])
+        db.execute(
+            "UPDATE inventory SET inStock = inStock + ? WHERE itemId = ?", [qty, iId]
+        )
+        db.commit()
+        items = db.execute(
+            "SELECT * FROM inventory"
+        ).fetchall()
         
+        return render_template("inventory/inventory.html", items = items)
+    
+    else:
+        items = db.execute(
+            "SELECT * FROM inventory"
+        ).fetchall()
         return render_template("inventory/inventory.html", items = items)

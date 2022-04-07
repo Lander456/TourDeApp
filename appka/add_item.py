@@ -10,12 +10,13 @@ def addItem():
         name = request.form["name"]
         category = request.form["categories"]
         colour = request.form["color"]
-        inStock = request.form["stock"]
+        inStock = int(request.form["stock"])
         decription = request.form["description"]
-        items = db.execute(
-            "INSERT INTO inventory (itemName, category, colour,IN_STORE, descript)"
-            "VALUES (?, ?, ?, ?, ?)",
-            (name, category, colour, inStock, decription)
+        price = int(request.form["price"])
+        db.execute(
+            "INSERT INTO inventory (itemName, category, colour, inStock, price, descript)"
+            "VALUES (?, ?, ?, ?, ?, ?)",
+            (name, category, colour, inStock, price, decription)
         )
         db.commit()
         return redirect("inventory")

@@ -520,3 +520,235 @@ outline: none;
     max-width: 180px;
 }
 
+
+
+.form-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-wrapper form {
+   display: grid;
+   grid-template-columns: 300px 300px;
+   grid-template-rows: 20px auto;
+   grid-template-areas: 
+    "title title"
+    "first second"
+    "btn btn"
+     ;
+
+     column-gap: 30px;
+     row-gap: 30px;
+    border: 1px solid #EFF0F5;
+    border-radius: 8px;
+    padding: 40px 100px;
+    margin-top: 50px;
+    background-color: #eff0f538;
+}
+
+.title{
+    grid-area: title;
+}
+
+.first{
+    grid-area: first;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.second{
+    grid-area: second;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.btn{
+    grid-area: btn;
+    display: flex;
+    justify-content: center;
+}
+
+.form-wrapper h1{
+    border-left: 2px solid #0AC5A8 ;
+    padding-left: 10px;
+}
+
+.form-wrapper form label{
+    margin-top: 25px;
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.form-wrapper form input{
+    font-size: 17px;
+    padding: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    border-radius: 8px;
+    border: 2px solid #EFF0F5;
+}
+
+.form-wrapper form input:focus{
+    outline: none;
+}
+
+.form-wrapper form select{
+    font-size: 17px;
+    padding: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    border-radius: 8px;
+    border: 2px solid #EFF0F5;
+}
+
+    
+    /***********************************************- REGISTRATION***********************************************/
+    /***********************************************- REGISTRATION***********************************************/
+    /***********************************************- REGISTRATION***********************************************/
+    
+    
+    .reg-wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .reg-wrapper form {
+       display: grid;
+       grid-template-columns: 300px 300px;
+       grid-template-rows: 20px auto;
+       grid-template-areas: 
+        "title title"
+        "first second"
+        "btn btn"
+         ;
+    
+         column-gap: 30px;
+         row-gap: 30px;
+        border: 1px solid #EFF0F5;
+        border-radius: 8px;
+        padding: 80px 100px;
+        margin-top: 50px;
+        background-color: #eff0f538;
+    }
+    
+    .title{
+        grid-area: title;
+    }
+    
+    .first{
+        grid-area: first;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .second{
+        grid-area: second;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    
+    }
+    
+    .btn{
+        grid-area: btn;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .reg-wrapper h1{
+        border-left: 2px solid #0AC5A8 ;
+        padding-left: 10px;
+    }
+    
+    .reg-wrapper form label{
+        margin-top: 25px;
+        margin-bottom: 5px;
+        font-weight: 600;
+        font-size: 17px;
+    }
+    
+    .reg-wrapper form input{
+        font-size: 17px;
+        padding: 8px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        border-radius: 8px;
+        border: 2px solid #EFF0F5;
+    }
+    
+    .reg-wrapper form input:focus{
+        outline: none;
+    }
+    
+    .reg-wrapper form select{
+        font-size: 17px;
+        padding: 8px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        border-radius: 8px;
+        border: 2px solid #EFF0F5;
+    }
+    
+    
+    .reg-wrapper form textarea{
+        font-size: 17px;
+        padding: 8px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        border-radius: 8px;
+        border: 2px solid #EFF0F5;
+        max-height: 200px;
+    
+    }
+    
+    .reg-wrapper form textarea, select:focus{
+    outline: none;
+    }
+    
+    .reg-wrapper form #add-role-btn{
+        border: 2px solid #0ac5a980;
+        background-color: #0ac5a91c; 
+        padding: 10px 30px;
+        font-weight: 600;
+    }
+    
+    .reg-wrapper form #add-role-btn:hover{
+        background-color: #0ac5a934;
+    
+    }
+
+    .reg-wrapper form #submit-add-btn{
+        border: 2px solid #0ac5a980;
+        background-color: #0ac5a91c; 
+        padding: 10px 30px;
+        font-weight: 600;
+    }
+    
+    .reg-wrapper form #submit-add-btn:hover{
+        background-color: #0ac5a934;
+    
+    }
+
+    .add-role-btn{
+        margin-top: 10px;
+        padding: 5px 10px !important;
+        font-size: 15px !important;
+    }
+
+    .invisible{
+        visibility: hidden;
+    }
+
+    .role-input{
+        display: flex;
+        flex-direction: column;
+    }
+
+  

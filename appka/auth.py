@@ -7,8 +7,10 @@ bp = Blueprint("auth", __name__)
 @bp.route("/register", methods=("GET","POST"))
 def register():
     if request.method == "POST":
-        username = request.form["username"]
-        password = request.form["password"]
+        username = request.form["name"]
+        password = request.form["pwd"]
+        role = request.form["role"]
+        email = request.form["email"]
         db = get_db()
         error = None
 
@@ -16,12 +18,16 @@ def register():
             error = "username invalid"
         elif not password:
             error = "password invalid"
+        elif not role:
+            error = "role required"
+        elif not email:
+            error = "email required"
         
         if error is None:
             try:
                 db.execute(
-                    "INSERT INTO user (username, password) VALUES (?,?)",
-                    (username, generate_password_hash(password)),
+                    "INSERT INTO users (username, passwords, email, roles) VALUES (?, ?, ?, ?)",
+                    (username, generate_password_hash(password), email, role),
                 )
                 db.commit()
             except db.IntegrityError:
@@ -41,18 +47,17 @@ def login():
         db = get_db()
         error = None
         user = db.execute(
-            "SELECT * FROM user WHERE username = ?", (username)
+            "SELECT passwords FROM users WHERE userName = ?", (username, )
         ).fetchone()
 
         if user is None:
             error = "incorrect username"
-        elif not check_password_hash(user["password"], password):
+        elif not check_password_hash(user["passwords"], password):
             error = "incorrect password"
         
         if error is None:
             session.clear()
-            session["user_id"] = user["id"]
-            return redirect(url_for("index"))
+            return redirect(url_for("inventory"))
 
         flash(error)
 

@@ -19,8 +19,9 @@ DROP TABLE IF EXISTS users;
 CREATE TABLE users(
     userId INTEGER PRIMARY KEY AUTOINCREMENT,
     userName TEXT UNIQUE NOT NULL,
-    password TEXT NOT NULL,
-    role 
+    passwords TEXT NOT NULL,
+    email TEXT NOT NULL,
+    roles TEXT NOT NULL
 );
 
 --cart

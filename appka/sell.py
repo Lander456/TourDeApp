@@ -33,7 +33,10 @@ def sell():
         
     elif request.method == "POST" and "addToCart" in request.form and "quantity" in request.form:
         qty = int(request.form["quantity"])
-        iId = int(request.form[""])
+        iName = int(request.form["itemName"])
+        db.execute(
+            "INSERT INTO cart FROM inventory WHERE itemName = ?;UPDATE cart SET inCart = ? WHERE itemName = ?;UPDATE inventory SET inStock = inStock - ? WHERE itemName = ?"[iName,qty,iName,qty,iName]
+        )
     else:
         items = db.execute(
             "SELECT * FROM inventory"

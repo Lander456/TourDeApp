@@ -33,7 +33,7 @@ CREATE TABLE cart(
     itemName TEXT,
     category TEXT,
     colour TEXT,
-    inStock INTEGER,
+    inCart INTEGER,
     price INTEGER,
     descript TEXT
 )

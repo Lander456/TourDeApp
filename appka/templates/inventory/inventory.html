@@ -21,9 +21,9 @@
         <img src="napis_trans.png" alt="logo" id="logo">
 
         <div class="nav-item-list">
-            <a class="list-item nav-active" href="inventory.html">Sklad</a>
-            <a class="list-item" href="sell.html">Pokladna</a>
-            <a class="list-item" href="/templates/auth/register.html">Registrace</a>
+            <a class="list-item nav-active" href="/inventory/inventory">Sklad</a>
+            <a class="list-item" href="/Pokladna">Pokladna</a>
+            <a class="list-item" href="/register">Registrace</a>
 
         </div>
 
@@ -90,15 +90,15 @@
                     <td>
                             <div class="quick-options">
                                 <div class="adjust-quantity">
-                                    <input type="number" id="quantity" class="qty" min="0" value= "0">
+                                    <input type="number" id="quantity" name="quantity" class="qty" min="0" value= "0">
                                     <span class="adjust-btns">
                                         <button class="adjust-btn adjust-btn-plus">+</button>
                                         <button class="adjust-btn adjust-btn-minus">-</button>
                                     </span>
                                 </div>
                                 <form action="#" autocomplete="off" method = "post">
-                                    <button class="add-btn-quick" id="addBtn"><i class="fa-solid fa-plus"></i></button>
-                                    <button class="remove-btn" id="removeBtn" ><i class="fa-solid fa-trash-can"></i></button>
+                                    <button class="add-btn-quick" id="addBtn" name="addBtn"><i class="fa-solid fa-plus"></i></button>
+                                    <button class="remove-btn" id="removeBtn" name="removeBtn"><i class="fa-solid fa-trash-can"></i></button>
                                 </form>
                             </div>
                         </td>

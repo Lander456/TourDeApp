@@ -35,7 +35,7 @@ def inventory():
         qty = int(request.form["quantity"])
         iId = int(request.form[""])
         db.execute(
-            "UPDATE inventory SET inStock = inStock - ? WHERE itemId = ?", [qty, iId]
+            "UPDATE inventory SET inStock = inStock - ? WHERE itemName = ?;", [qty, iId]
         )
         db.commit()
         items = db.execute(
@@ -43,9 +43,9 @@ def inventory():
         ).fetchall()
     elif request.method == "POST" and "addBtn" in request.form:
         qty = int(request.form["quantity"])
-        iId = int(request.form[""])
+        iName = int(request.form["itemName"])
         db.execute(
-            "UPDATE inventory SET inStock = inStock + ? WHERE itemId = ?", [qty, iId]
+            "UPDATE inventory SET inStock = inStock + ? WHERE itemName = ?", [qty, iName]
         )
         db.commit()
         items = db.execute(
